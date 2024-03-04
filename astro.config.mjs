@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://javihidalgodev.github.io/portfolio/',
-  base: '/dist'
+  base: 'dist'
 });
