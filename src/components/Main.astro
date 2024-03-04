@@ -3,19 +3,21 @@ import profileIMG from '../images/profile.jpg'
 import LinkButton from './LinkButton.astro'
 ---
 
-<section id="main-section" class="section max-w-[700px] pt-[180px] flex flex-col gap-12 sm:gap-6">
-  <div id="main-presentation" class="flex flex-col-reverse gap-4 sm:flex-row sm:justify-between items-center">
-    <div class="flex flex-col items-center sm:items-start gap-2">
-      <h1 class="font-normal text-5xl sm:text-4xl text-center sm:text-left">Hola, soy <span class="font-[700] text-[#dbff00]">Javier Hidalgo</span></h1>
-      <h2 class="text-2xl sm:text-2xl w-fit px-3 py-0.5 bg-[#dbff00] font-bold text-[#02241d]">desarrollador web</h2>
+<section id="main-section" class="section max-w-[700px] sm:pt-[180px] flex flex-col gap-12 sm:gap-6">
+  <div class="h-screen sm:h-auto flex flex-col justify-center gap-4">
+    <div id="main-presentation" class="flex flex-col-reverse gap-4 justify-center sm:flex-row sm:justify-between items-center">
+      <div class="flex flex-col items-center sm:items-start gap-2">
+        <h1 class="font-normal text-5xl sm:text-4xl text-center sm:text-left">Hola, soy <span class="font-[700] text-[#dbff00]">Javier Hidalgo</span></h1>
+        <h2 class="text-2xl sm:text-2xl w-fit px-3 py-0.5 bg-[#dbff00] font-bold text-[#02241d]">desarrollador web</h2>
+      </div>
+      <img class="w-[200px] sm:w-[150px] ml-2 rounded-full" src={profileIMG.src} alt="">
     </div>
-    <img class="w-[200px] sm:w-[150px] ml-2 rounded-full" src={profileIMG.src} alt="">
-  </div>
-
-  <div id="main-link" class="flex flex-wrap justify-center sm:justify-start gap-3 ">
-    <LinkButton text="Linkedin" url="https://www.linkedin.com/in/javihidalgodev/" icon={{type: 'brands', uri: 'linkedin'}} />
-    <LinkButton text="GitHub" url="https://github.com/javihidalgodev" icon={{type: 'brands', uri: 'github'}} />
-    <LinkButton text="Mi CV" url="mailto:javierhidalgo@contacto.dev" icon={{type: 'solid', uri: 'download'}} />
+  
+    <div id="main-link" class="flex flex-wrap justify-center sm:justify-start gap-3 ">
+      <LinkButton text="Linkedin" url="https://www.linkedin.com/in/javihidalgodev/" icon={{type: 'brands', uri: 'linkedin'}} />
+      <LinkButton text="GitHub" url="https://github.com/javihidalgodev" icon={{type: 'brands', uri: 'github'}} />
+      <LinkButton text="Mi CV" url="mailto:javierhidalgo@contacto.dev" icon={{type: 'solid', uri: 'download'}} />
+    </div>
   </div>
 
   <div id="main-description">
