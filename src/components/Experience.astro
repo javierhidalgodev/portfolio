@@ -1,0 +1,13 @@
+---
+import experience from '../mocks/experience.json'
+import ExperienceCard from './ExperienceCard.astro'
+---
+
+<section id="experience-section" class="section w-full pt-[100px] flex flex-col gap-3 select-none">
+  <h2 id="experience-title" class="font-[700] text-[30px]">Experiencia</h2>
+  <div id="experience-cards-container" class="flex flex-col gap-7">
+    {
+      experience.map(e => <ExperienceCard position={e.position} company={e.company} date={e.date} description={e.description} />)
+    }
+  </div>
+</section>
