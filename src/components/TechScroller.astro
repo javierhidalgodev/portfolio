@@ -1,0 +1,115 @@
+---
+import HTML from "../icons/HTML.astro"
+import CSS from "../icons/CSS.astro"
+import JavaScript from "../icons/JavaScript.astro"
+import React  from "../icons/React.astro"
+import Tailwind  from "../icons/Tailwind.astro"
+import Node from "../icons/Node.astro"
+import Express from "../icons/Express.astro"
+import AstroIcon from "../icons/AstroIcon.astro"
+import Bootstrap from "../icons/Bootstrap.astro"
+import MongoDB from "../icons/MongoDB.astro"
+import Vite from "../icons/Vite.astro"
+import Sass from "../icons/Sass.astro"
+---
+
+<section class="scroller w-[90%] flex mx-auto overflow-hidden">
+  <div class="scroller__inner mt-[100px] flex justify-center gap-16 whitespace-nowrap">
+    <span>
+      <HTML />
+    </span>
+    <span class="css">
+      <CSS />
+    </span>
+    <span class="javascript">
+      <JavaScript />
+    </span>
+    <span class="react">
+      <React />
+      <div data-popover id="popover-bottom" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+            <h3 class="font-semibold text-gray-900 dark:text-white">Popover bottom</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>And here's some amazing content. It's very engaging. Right?</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+    </span>
+    <span class="astro">
+      <AstroIcon />
+    </span>
+    <span class="vite">
+      <Vite />
+    </span>
+    <span class="bootstrap">
+      <Bootstrap />
+    </span>
+    <span class="tailwind">
+      <Tailwind />
+    </span>
+    <span class="sass">
+      <Sass />
+    </span>
+    <span class="node">
+      <Node />
+    </span>
+    <span class="express">
+      <Express />
+    </span>
+    <span class="mongodb">
+      <MongoDB />
+    </span>
+  </div>
+</section>
+
+<style>
+	.scroller {
+		mask: linear-gradient(90deg, transparent, white, white 80%, transparent);
+		-webkit-mask: linear-gradient(
+			90deg,
+			transparent,
+			white,
+			white 80%,
+			transparent
+		);
+	}
+
+	.scroller__inner {
+    animation: scroll 20s linear infinite;
+	}
+
+  .scroller__inner:hover {
+    animation-play-state: paused;
+	}
+  
+	@keyframes scroll {
+		to {
+			transform: translate(calc(-50% - 2rem));
+		}
+	}
+
+	.scroller__inner span { transition: 100ms; }
+	.scroller__inner span:hover {
+		transform: scale(.9);
+	}
+</style>
+
+<script>
+	const scroller = document.querySelector(".scroller");
+
+	const addAnimation = () => {
+			scroller.setAttribute("data-animated", "true");
+			const scrollerInner = scroller.querySelector(".scroller__inner");
+			const scrollerContent = Array.from(scrollerInner.children);
+
+			scrollerContent.forEach((item) => {
+				const duplicateItem = item.cloneNode(true);
+				duplicateItem.setAttribute("data-hidden", true);
+				scrollerInner.appendChild(duplicateItem);
+			});
+	};
+
+	!window.matchMedia("(prefers-reduced-montion: reduce)").matches &&
+		addAnimation();
+</script>
