@@ -1,17 +1,54 @@
 ---
-import LinkButton from '../components/LinkButton.astro';
+import LinkButton from './LinkButton.astro';
+import Badge from './Badge.astro'
 
 const {object} = Astro.props
-const {title, thumbnail, description, links} = object
+const {title, thumbnail, description, links, technologies} = object
+
+const setPallete = (brand) => {
+  switch (brand) {
+    case 'HTML':
+      return 'bg-[#dd4b25] border-[#dd4b25]'
+    case 'CSS':
+      return 'bg-[#2173f7] border-[#2173f7]'
+    case 'JavaScript':
+      return 'bg-[#efd81d] border-[#efd81d]'
+    case 'React':
+      return 'bg-[#149eca] border-[#149eca]'
+    case 'Astro':
+        return 'bg-[#e63ba9] border-[#e63ba9]'
+    case 'Vite':
+      return 'bg-[#ffbc14] border-[#ffbc14]'
+    case 'Bootstrap':
+      return 'bg-[#7c10f7] border-[#7c10f7]'
+    case 'Tailwind':
+      return 'bg-[#38bdf8] border-[#38bdf8]'
+    case 'Sass':
+      return 'bg-[#63b649] border-[#63b649]'
+    case 'Node':
+      return 'bg-[#63b649] border-[#63b649]'
+      case 'Express':
+      return 'bg-[#020202] border-[#020202]'
+    case 'SQL':
+      return 'bg-[#b91c1c] border-[#b91c1c]'
+    case 'MongoDB':
+      return 'bg-[#b1ff05] border-[#b1ff05]'
+  }
+}
 
 ---
 
 <div class="project-card sm:p-5 rounded-lg md:flex gap-8 sm:hover:bg-slate-400 sm:hover:bg-opacity-20">
-  <div class="lg:w-1/2" >
+  <div class="md:w-1/2" >
     <img class="w-full rounded-lg border-[1px] border-neutral-700 hover:border-neutral-400 duration-100" src={`/portfolio/${thumbnail}`} alt="project img">
   </div>
-  <div class="project-description flex flex-col gap-3 lg:w-1/2 mt-4 lg:mt-0">
+  <div class="project-description flex flex-col gap-3 md:w-1/2 mt-4 lg:mt-0">
     <h3 id="project-title" class="font-[700] text-[24px] text-[#dbff00]">{title}</h3>
+    <div class="project-tech flex gap-2">
+      {
+        technologies.map(tech => <Badge label={tech} palette ={setPallete(tech)} />)
+      }
+    </div>
     <p>{description}</p>
     <div class="project-links-container flex gap-3">
       <LinkButton text="Demo" url={links.demo}, icon={{type: 'solid', uri: 'laptop-code'}} />

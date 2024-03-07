@@ -2,18 +2,38 @@
   {
     "thumbnail": "weather-app-thumbnail.webp",
     "title": "Weather APP",
-    "description": "Consulta el tiempo de cualquier parte del mundo. Puedes obtener datos como la temperatura actual, máxima y mínima, velocidad del viento, humedad...",
-    "technologies": ["html", "javascript", "tailwind"],
+    "description": "Consulta el tiempo de cualquier parte del mundo. Puedes obtener datos como la temperatura actual, máxima y mínima, velocidad del viento, humedad... Los datos consumidos vienen de la API OpenWeather.",
+    "technologies": ["HTML", "JavaScript", "Tailwind"],
     "links": {
       "repo": "https://github.com/javihidalgodev/weather-app",
       "demo": "https://javihidalgodev.github.io/weather-app/"
     }
   },
   {
+    "thumbnail": "quizz-app-thumbnail.webp",
+    "title": "Quizz App",
+    "description": "Pequeña aplicación de preguntas y respuestas.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "links": {
+      "repo": "https://github.com/javihidalgodev/50-projects-50-days/tree/main/46-quiz-app",
+      "demo": "https://javihidalgodev.github.io/50-projects-50-days/46-quiz-app/"
+    }
+  },
+  {
+    "thumbnail": "random-image-feed-thumbnail.webp",
+    "title": "Random Image Feed",
+    "description": "Galería de imágenes generadas aleatoriamente. Se trabaja con la API de Unsplash para la obtención de las imágenes.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "links": {
+      "repo": "https://github.com/javihidalgodev/50-projects-50-days/tree/main/48-random-image-feed",
+      "demo": "https://javihidalgodev.github.io/50-projects-50-days/48-random-image-feed/ "
+    }
+  },
+  {
     "thumbnail": "50p50d-thumbnail.webp",
     "title": "50 projects 50 days",
     "description": "En esta página te enseño 50 proyectos desarrollados con HTML+CSS+JavaScript. Esto forma parte del reto \"50 projects 50 days\" de Brad Traversy.",
-    "technologies": ["html","css", "javascript"],
+    "technologies": ["HTML","CSS", "JavaScript"],
     "links": {
       "repo": "https://github.com/javihidalgodev/50-projects-50-days",
       "demo": "https://javihidalgodev.github.io/50P50D-by-javi-hidalgo-dev/"
@@ -23,7 +43,7 @@
     "thumbnail": "spotify-artists-finder-thumbnail.webp",
     "title": "Spotify Artists Finder",
     "description": "Con esta aplicación puedes buscar a los artistas de Spotify y su información básica. Para recuperar la información se ataca directamente a la API de Spotify.",
-    "technologies": ["html", "css", "react"],
+    "technologies": ["HTML", "CSS", "React"],
     "links": {
       "repo": "https://github.com/javihidalgodev/spotify-artists-finder",
       "demo": "https://javihidalgodev.github.io/spotify-artists-finder/"
@@ -33,7 +53,7 @@
     "thumbnail": "idioms-thumbnail.webp",
     "title": "Idioms App",
     "description": "Una aplicación para aprender las expresiones más comunes en inglés, y así naturalizar mucho más tus conversaciones.",
-    "technologies": ["html", "css", "react"],
+    "technologies": ["HTML", "CSS", "React"],
     "links": {
       "repo": "https://github.com/javihidalgodev/idioms-app",
       "demo": "https://javihidalgodev.github.io/idioms-app/"
@@ -43,7 +63,7 @@
     "thumbnail": "all-batmans-thumbnail.webp",
     "title": "The Batmans of all time",
     "description": "Conoce a los actores más relevantes que han interpretado a \"El Caballero Oscuro\" de DC.",
-    "technologies": ["html", "css", "javascript", "astro"],
+    "technologies": ["HTML", "CSS", "JavaScript", "Astro"],
     "links": {
       "repo": "https://github.com/javihidalgodev/all-batmans",
       "demo": "https://javihidalgodev.github.io/all-batmans/"
