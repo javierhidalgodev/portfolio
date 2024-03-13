@@ -16,7 +16,8 @@ export default {
 	},
 	plugins: [
 		plugin(function({addVariant}){
-			addVariant('children', '&>*')
+			addVariant('children', '&>*'),
+			addVariant('children-li', '& a')
 		})
 	],
 }

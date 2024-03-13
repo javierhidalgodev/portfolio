@@ -7,11 +7,11 @@ const {text, url, icon} = Astro.props
   href={url}
   class="
     w-fit
-    flex
     py-[4px]
     px-[14px]
-    justify-center
+    flex
     items-center
+    justify-center
     gap-[5px]
     bg-white
     rounded-full
@@ -22,10 +22,6 @@ const {text, url, icon} = Astro.props
     text-black
     font-[700]
     duration-100">
-    {
-      icon
-        ? <i class={`flex items-center fa-${icon.type} fa-${icon.uri} size-4 fa-sm`} />
-        : null
-    }
-    {text}
+      <slot />
+      {text}
 </a>

@@ -1,13 +1,12 @@
 ---
+import '@fontsource-variable/archivo';
+import License from '../components/License.astro'
 
 interface Props {
 	title: string
 }
 
 const { title } = Astro.props
-
-import '@fontsource-variable/archivo';
-
 ---
 
 <html lang="es">
@@ -21,6 +20,7 @@ import '@fontsource-variable/archivo';
 	</head>
 	<body class=" h-full flex flex-col items-center font-archivo text-white">
 		<slot />
+		<License />
 	</body>
 </html>
 

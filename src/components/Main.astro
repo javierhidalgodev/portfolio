@@ -1,6 +1,9 @@
 ---
 import profileIMG from '../images/profile.jpg'
 import LinkButton from './LinkButton.astro'
+import LinkedIn from '../icons/LinkedIn.astro'
+import Github from '../icons/Github.astro'
+import CV from '../icons/CV.astro'
 ---
 
 <section id="main-section" class="section max-w-[700px] sm:pt-[180px] flex flex-col gap-12 sm:gap-6">
@@ -14,9 +17,15 @@ import LinkButton from './LinkButton.astro'
     </div>
   
     <div id="main-link" class="flex flex-wrap justify-center sm:justify-start gap-3 ">
-      <LinkButton text="Linkedin" url="https://www.linkedin.com/in/javihidalgodev/" icon={{type: 'brands', uri: 'linkedin'}} />
-      <LinkButton text="GitHub" url="https://github.com/javihidalgodev" icon={{type: 'brands', uri: 'github'}} />
-      <LinkButton text="Mi CV" url="mailto:javierhidalgo@contacto.dev" icon={{type: 'solid', uri: 'download'}} />
+      <LinkButton text="Linkedin" url="https://www.linkedin.com/in/javihidalgodev/">
+        <LinkedIn />
+      </LinkButton>
+      <LinkButton text="GitHub" url="https://github.com/javihidalgodev">
+        <Github />
+      </LinkButton>
+      <LinkButton text="Mi CV" url="mailto:javierhidalgo@contacto.dev">
+        <CV />
+      </LinkButton>
     </div>
   </div>
 

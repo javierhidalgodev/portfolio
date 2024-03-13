@@ -1,6 +1,8 @@
 ---
 import LinkButton from './LinkButton.astro';
 import Badge from './Badge.astro'
+import Demo from '../icons/Demo.astro'
+import Github from '../icons/Github.astro';
 
 const {object} = Astro.props
 const {title, thumbnail, description, links, technologies} = object
@@ -51,8 +53,12 @@ const setPallete = (brand) => {
     </div>
     <p>{description}</p>
     <div class="project-links-container flex gap-3">
-      <LinkButton text="Demo" url={links.demo}, icon={{type: 'solid', uri: 'laptop-code'}} />
-      <LinkButton text="Repositorio" url={links.repo}, icon={{type: 'brands', uri: 'github'}} />
+      <LinkButton text="Demo" url={links.demo}>
+        <Demo />
+      </LinkButton>
+      <LinkButton text="Repositorio" url={links.repo}>
+        <Github />
+      </LinkButton>
     </div>
   </div>
 </div>
