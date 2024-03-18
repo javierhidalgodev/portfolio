@@ -45,7 +45,7 @@ const setPallete = (brand) => {
     <img class="w-full rounded-lg border-[1px] border-neutral-700 hover:border-neutral-400 duration-100" src={`/portfolio/${thumbnail}`} alt="project img">
   </div>
   <div class="project-description flex flex-col gap-3 md:w-1/2 mt-4 lg:mt-0">
-    <h3 id="project-title" class="font-[700] text-[24px] text-[#dbff00]">{title}</h3>
+    <h3 id="project-title" class="font-[700] text-[24px] text-[var(--accent-color)]">{title}</h3>
     <div class="project-tech flex gap-2">
       {
         technologies.map(tech => <Badge label={tech} palette ={setPallete(tech)} />)

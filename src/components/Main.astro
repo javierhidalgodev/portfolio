@@ -10,10 +10,12 @@ import CV from '../icons/CV.astro'
   <div class="h-screen sm:h-auto flex flex-col justify-center gap-4">
     <div id="main-presentation" class="flex flex-col-reverse gap-4 justify-center sm:flex-row sm:justify-between items-center">
       <div class="flex flex-col items-center sm:items-start gap-2">
-        <h1 class="font-normal text-5xl sm:text-4xl text-center sm:text-left">Hola, soy <span class="font-[700] text-[#dbff00]">Javier Hidalgo</span></h1>
-        <h2 class="text-2xl sm:text-2xl w-fit px-3 py-0.5 bg-[#dbff00] font-bold text-[#02241d]">desarrollador web</h2>
+        <h1 class="font-normal text-5xl sm:text-4xl text-center sm:text-left">Hola, soy <span class="font-[700] text-[var(--accent-color)]">Javier Hidalgo</span></h1>
+        <h2 class="text-2xl sm:text-2xl w-fit px-3 py-0.5 bg-[var(--accent-color)] font-bold text-[var(--accent-color-variant)]">desarrollador web</h2>
       </div>
-      <img class="w-[200px] sm:w-[150px] ml-2 rounded-full" src={profileIMG.src} alt="">
+      <div id="profile">
+        <img class="w-[200px] sm:w-[150px] rounded-full" src={profileIMG.src} alt="">
+      </div>
     </div>
   
     <div id="main-link" class="flex flex-wrap justify-center sm:justify-start gap-3 ">
@@ -30,12 +32,62 @@ import CV from '../icons/CV.astro'
   </div>
 
   <div id="main-description">
-    <p class="text-[20px] &[]">Especializado en el desarrollo Front End, y peleándome con el Back para ser un buen Full Stack 🥊🤓. Me gusta el diseño de soluciones sencillas, intutitivas, funcionales y minimalistas. <span class="bg-[#dd4b25] font-[700]">HTML</span> <span class="bg-[#2173f7] font-[700]">CSS</span> <span class="bg-[#efd81d] font-[700] text-black">JavaScript</span> <span class="bg-[#149eca] font-[700]">React</span> <span class="bg-[#e63ba9] font-[700]">Astro</span> <span class="bg-[#ffbc14] font-[700] text-black">Vite</span> <span class="bg-[#7c10f7] font-[700]">Bootstrap</span> <span class="bg-[#38bdf8] font-[700]">Tailwind</span> <span class="bg-[#63b649] font-[700]">Node</span> <span class="bg-[#020202] font-[700]">Express</span> <span class="bg-red-700 font-[700]">SQL</span> <span class="bg-[#b1ff05] font-[700] text-black">MongoDB</span> y en continuo aprendizaje.</p>
+    <p class="text-[20px] children:font-[700]">Especializado en el desarrollo Front End, y peleándome con el Back para ser un buen Full Stack 🥊🤓. Me gusta el diseño de soluciones sencillas, intutitivas, funcionales y minimalistas. 
+      <span class="bg-[var(--html-color)]">HTML</span>
+      <span class="bg-[var(--css-color)]">CSS</span>
+      <span class="bg-[var(--js-color)] !text-[#191919]">JavaScript</span>
+      <span class="bg-[var(--react-color)]">React</span>
+      <span class="bg-[var(--astro-color)]">Astro</span>
+      <span class="bg-[var(--vite-color)] !text-[#191919]">Vite</span>
+      <span class="bg-[var(--bootstrap-color)]">Bootstrap</span>
+      <span class="bg-[var(--tailwind-color)]">Tailwind</span>
+      <span class="bg-[var(--node-color)]">Node</span>
+      <span class="bg-[var(--express-color)]">Express</span>
+      <span class="bg-[var(--sql-color)]">SQL</span>
+      <span class="bg-[var(--mongodb-color)] !text-[#191919]">MongoDB</span> y en continuo aprendizaje.</p>
   </div>
 </section>
 
 <style>
   p > span {
     padding: 2px 4px;
+    color: #fefefe;
   }
+
+  #profile {
+    position: relative;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.3);
+    }
+    to {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+
+  img {
+    position: relative;
+    padding: 1px;
+    box-sizing: border-box;
+  }
+  
+  
+  #profile::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 9999%;
+    background: linear-gradient(#dbff00, #09a9d1);
+    filter: blur(20px);
+    animation: rotate 10s linear infinite;
+    opacity: .5;
+  }
+
 </style>

@@ -21,7 +21,18 @@ const {text, url, icon} = Astro.props
     hover:bg-[#dbff00]
     text-black
     font-[700]
+    border-[1px]
+    border-transparent
     duration-100">
       <slot />
       {text}
 </a>
+
+<style>
+  html:not(.dark) a {
+    border: 1px solid #000;
+    color: #000;
+
+    box-sizing: content-box;
+  }
+</style>

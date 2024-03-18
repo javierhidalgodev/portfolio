@@ -9,7 +9,7 @@ interface Props {
 const { title } = Astro.props
 ---
 
-<html lang="es">
+<html lang="es" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
@@ -18,7 +18,7 @@ const { title } = Astro.props
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class=" h-full flex flex-col items-center font-archivo text-white">
+	<body class=" h-full flex flex-col items-center font-archivo">
 		<slot />
 		<License />
 	</body>
@@ -27,13 +27,38 @@ const { title } = Astro.props
 <style is:global>
   :root {
     color-scheme: light dark;
+		--primary: #fefefe;
+		--secondary: #191919; 
+		--accent-color: #02241d;
+		--accent-color-variant: #dbff00;
+		--html-color: #dd4b25;
+		--css-color: #2173f7;
+		--js-color: #efd81d;
+		--react-color: #149eca;
+		--astro-color: #e63ba8;
+		--vite-color: #ffbc14;
+		--bootstrap-color: #7c10f7;
+		--tailwind-color: #38bdf8;
+		--node-color: #63b649;
+		--express-color: #020202;
+		--sql-color: #b91c1c;
+		--mongodb-color:#b1ff05;
   }
   
 	html {
 		scroll-behavior: smooth;
-	}
+		color: var(--secondary);
+		background-color: var(--primary);
 
-	body {
-		background: #191919;
+		transition: 150ms;
+	}
+	
+	html.dark {
+		--primary: #191919; 
+		--secondary: #fefefe;
+		--accent-color: #dbff00;
+		--accent-color-variant: #02241d;
+		color: var(--secondary);
+		background-color: var(--primary);
 	}
 </style>
