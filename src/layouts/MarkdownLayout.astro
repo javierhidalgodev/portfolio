@@ -1,0 +1,33 @@
+---
+import Layout from './Layout.astro'
+import BlogNavbar from '../components/BlogNavbar.astro'
+import Back from '../icons/Back.astro'
+const { frontmatter } = Astro.props
+
+const date = new Date(frontmatter.pubDate)
+---
+
+<Layout title=`${frontmatter.title} | Javier Hidalgo`>
+  <BlogNavbar />
+  <main class="max-w-[900px] w-full px-6">
+    <div class="blog-container mt-40">
+      <a class="my-4 flex items-center gap-2 hover:text-[#dbff00]" href="/blog"><Back class="" /> Vover a la lista de Blogs</a>
+      <h1 class="mb-6 text-4xl font-bold">{frontmatter.title}</h1>
+      <div class="mb-6 flex items-center gap-3">
+        <img class="size-12 rounded-full" src={frontmatter.image.url} alt="photo">
+        <div class="flex flex-col">
+          <span class="font-medium">{frontmatter.author}</span>
+          <span>{date.toLocaleDateString()}</span>
+        </div>
+      </div>
+      <div class="blog-tags my-4 flex gap-3">
+        {
+          frontmatter.tags.map(tag =>
+            <a href="#" class="px-3 py-1 bg-[var(--accent-color)] text-[var(--accent-color-variant)] rounded-md text-sm">{tag}</a>
+          )
+        }
+      </div>
+      <slot />
+    </div>
+  </main>
+</Layout>

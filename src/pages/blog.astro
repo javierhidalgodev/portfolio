@@ -1,0 +1,32 @@
+---
+import BlogNavbar from '../components/BlogNavbar.astro'
+import Layout from '../layouts/Layout.astro'
+const allBlogs = await Astro.glob('./blog/*.md')
+---
+
+<Layout title='Blog | Javier Hidalgo | Desarrollo Web'>
+  <BlogNavbar />
+  <header>
+    <span class='sm:hidden block text-xl font-bold mt-6'>
+      javierhidalgo<span class="text-[var(--accent-color)]">/blog</span>
+    </span>
+  </header>
+  <main class="max-w-[900px] w-full px-6">
+    <h1 class="mt-40 text-7xl font-bold">Blog</h1>
+    <div class="blogs-container flex flex-col my-6">
+      {
+        allBlogs.map(blog => {
+
+          const pubDate = new Date(blog.frontmatter.pubDate)
+
+          return (
+            <li class="flex flex-col border-t-[1px] border-t-zinc-700 list-none py-4">
+              <a class="text-2xl font-medium hover:text-[#dbff00]" href={blog.url}>{blog.frontmatter.title}</a>
+              <span class="text-lg">{blog.frontmatter.author}, {pubDate.toLocaleDateString()}</span>
+            </li>
+          )
+        })
+      }
+    </div>
+  </main>
+</Layout>
