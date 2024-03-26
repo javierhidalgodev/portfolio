@@ -1,0 +1,18 @@
+---
+import LinkButton from "./LinkButton.astro"
+
+const { title, centre, date, duration, link } = Astro.props.object
+
+const formatCentre = centre.reduce((acc, val) => acc + ', ' + val)
+
+---
+
+<div class="certification-card flex justify-between py-4 border-b border-zinc-700 gap-2">
+  <div class="certification-card__left">
+    <h2 class="text-lg text-[var(--accent-color)] font-medium">{title}</h2>
+    <p class="text-base">{formatCentre} {date && `| ${date}`} {duration && `| ${duration}`}</p>
+  </div>
+  <div class="certification-card__right">
+    {link && <LinkButton text="Ver" url={link} />}
+  </div>
+</div>

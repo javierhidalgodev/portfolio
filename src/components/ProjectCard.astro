@@ -40,11 +40,12 @@ const setPallete = (brand) => {
 
 ---
 
-<div class="project-card sm:p-5 rounded-lg md:flex gap-8 sm:hover:bg-slate-400 sm:hover:bg-opacity-20">
-  <div class="md:w-1/2" >
-    <img class="w-full rounded-lg border-[1px] border-neutral-700 hover:border-neutral-400 duration-100" src={`/portfolio/${thumbnail}`} alt="project img">
+<div class="project-card relative sm:p-5 rounded-lg md:flex gap-8 sm:border-[1px] border-neutral-300/35">
+  <div class="project-bg pointer-events-none top-0 left-0 absolute w-full h-full opacity-0 z-0 duration-500"></div>
+  <div class="md:w-1/2 z-10">
+    <img class="w-full rounded-lg border-[1px] border-neutral-700" src={`/portfolio/${thumbnail}`} alt="project img">
   </div>
-  <div class="project-description flex flex-col gap-3 md:w-1/2 mt-4 lg:mt-0">
+  <div class="project-description flex flex-col gap-3 md:w-1/2 mt-4 lg:mt-0 z-10">
     <h3 id="project-title" class="font-[700] text-[24px] text-[var(--accent-color)]">{title}</h3>
     <div class="project-tech flex gap-2">
       {
@@ -62,3 +63,23 @@ const setPallete = (brand) => {
     </div>
   </div>
 </div>
+
+<script>
+  const projectCards = document.querySelectorAll('.project-card')
+  
+  projectCards.forEach(pC => {
+    const pCbg = pC.querySelector('.project-bg')
+    pC.addEventListener('mouseenter', () => {
+      pCbg.classList.replace('opacity-0', 'opacity-1')
+    })
+    
+    pC.addEventListener('mousemove', (e) => {
+      const b = pCbg.getBoundingClientRect()
+      pCbg.style.background = `radial-gradient(600px circle at ${e.clientX - b.left}px ${e.clientY - b.top}px, rgba(221, 255, 0, 0.1), transparent 40%)`
+    })
+
+    pC.addEventListener('mouseleave', () => {
+      pCbg.classList.replace('opacity-1', 'opacity-0')
+    })
+  })
+</script>

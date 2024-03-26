@@ -1,5 +1,7 @@
 ---
 import experience from '../mocks/experience.json'
+import CertificationsContainer from './CertificationsContainer.astro'
+// import CertificationsContainer from './CertificationsContainer'
 import ExperienceCard from './ExperienceCard.astro'
 ---
 
@@ -10,4 +12,6 @@ import ExperienceCard from './ExperienceCard.astro'
       experience.map(e => <ExperienceCard position={e.position} company={e.company} date={e.date} description={e.description} />)
     }
   </div>
+  <CertificationsContainer />
+  <!-- <CertificationsContainer client:load /> -->
 </section>

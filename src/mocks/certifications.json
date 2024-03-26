@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Desarrollo de aplicaciones web modernas con JavaScript",
+    "centre": ["Full Stack Open"],
+    "date": "cursando",
+    "link": "https://fullstackopen.com/es/"
+  },
+  {
+    "title": "Data Visualization with D3",
+    "centre": ["freeCodeCamp"],
+    "date": "enero 2024",
+    "duration": "300h",
+    "link": "https://www.freecodecamp.org/certification/javihidalgodev/data-visualization"
+  },
+  {
+    "title": "Back End Development and APIs",
+    "centre": ["freeCodeCamp"],
+    "date": "diciembre 2023",
+    "duration": "300h",
+    "link": "https://www.freecodecamp.org/certification/javihidalgodev/back-end-development-and-apis"
+  },
+  {
+    "title": "Front End Development Libraries",
+    "centre": ["freeCodeCamp"],
+    "date": "diciembre 2023",
+    "duration": "300h",
+    "link": "https://www.freecodecamp.org/certification/javihidalgodev/front-end-development-libraries"
+  },
+  {
+    "title": "JavaScript Algorithms and Data Structures",
+    "centre": ["freeCodeCamp"],
+    "date": "noviembre 2023",
+    "duration": "300h",
+    "link": "https://www.freecodecamp.org/certification/javihidalgodev/javascript-algorithms-and-data-structures"
+  },
+  {
+    "title": "Responsive Web Design",
+    "centre": ["freeCodeCamp"],
+    "date": "octubre 2023",
+    "duration": "300h",
+    "link": "https://www.freecodecamp.org/certification/javihidalgodev/responsive-web-design"
+  },
+  {
+    "title": "Curso de React",
+    "centre": ["OpenWebinars"],
+    "date": "julio 2023",
+    "duration": "10h",
+    "link": "https://openwebinars.net/cert/jdRr"
+  },
+  {
+    "title": "Java 8 para programadores",
+    "centre": ["OpenWebinars"],
+    "date": "junio 2023",
+    "duration": "18h",
+    "link": "https://openwebinars.net/cert/RQsW"
+  },
+  {
+    "title": "JavaScript",
+    "centre": ["OpenWebinars"],
+    "date": "junio 2023",
+    "duration": "10h",
+    "link": "https://openwebinars.net/cert/svVH"
+  },
+  {
+    "title": "PHP",
+    "centre": ["OpenWebinars"],
+    "date": "junio 2023",
+    "link": "https://openwebinars.net/cert/U536"
+  },
+  {
+    "title": "Curso de Java 8 desde 0",
+    "centre": ["OpenWebinars"],
+    "date": "marzo 2023",
+    "duration": "18h",
+    "link": "https://openwebinars.net/cert/3UwV"
+  },
+  {
+    "title": "Curso para aprender Linux desde 0",
+    "centre": ["OpenWebinars"],
+    "date": "marzo 2023",
+    "duration": "15h",
+    "link": "https://openwebinars.net/cert/3UwV"
+  },
+  {
+    "title": "Curso de HTML y CSS3",
+    "centre": ["OpenWebinars"],
+    "date": "febrero 2023",
+    "duration": "10h",
+    "link": "https://openwebinars.net/cert/3UwV"
+  },
+  {
+    "title": "Fundamentos de Marketing Digital",
+    "centre": ["Google Actívate"],
+    "date": "noviembre 2020"
+  }
+]

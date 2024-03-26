@@ -1,0 +1,51 @@
+---
+import CertificationCard from "./CertificationCard.astro"
+import certifications from "../mocks/certifications.json"
+import Arrow from "../icons/Arrow.astro"
+
+const initialShowedCertifications = certifications.slice(0, 3)
+const remainingCertifications = certifications.slice(3)
+---
+
+<div id="certifications-section" class="mt-5">
+  <h3 id="certicication-title" class="font-[700] text-[24px] ">Certificaciones</h3>
+  <div id="certifications-card-container" class="flex flex-col">
+    {
+      initialShowedCertifications.map(c => <CertificationCard showed="true" object={c} />)
+    }
+  </div>
+  <div id="h-certifications-card-container" class="hidden flex flex-col">
+    {
+      remainingCertifications.map(c => <CertificationCard showed="true" object={c} />)
+    }
+  </div>
+  <button id="load-more-btn" class="w-auto mx-auto mt-8 py-1 px-3 flex items-center justify-center gap-2 bg-white rounded-full text-base text-black hover:scale-105 hover:text-[#00271e] hover:bg-[#dbff00] text-black font-[700] border border-transparent duration-100">
+    <span>Ver todas</span><Arrow />
+  </button>
+</div>
+
+<script>
+  const loadMoreBtn = document.getElementById('load-more-btn')
+  const loadMoreBtnText = loadMoreBtn.querySelector('span')
+  const loadMoreBtnIcon = loadMoreBtn.querySelector('svg')
+  const hiddenCerts = document.getElementById('h-certifications-card-container')
+
+  loadMoreBtn.addEventListener('click', () => {
+    hiddenCerts.classList.toggle('hidden')
+    hiddenCerts.classList.contains('hidden')
+      ? (
+        loadMoreBtnText.textContent = 'Ver todas',
+        loadMoreBtnIcon.style.transform = 'rotate(0deg)'
+        )
+      : (
+        loadMoreBtnText.textContent = 'Mostrar menos',
+        loadMoreBtnIcon.style.transform = 'rotate(180deg)'
+      )
+  })
+</script>
+
+<style>
+  html:not(.dark) button {
+    border-color: black;
+  }
+</style>
