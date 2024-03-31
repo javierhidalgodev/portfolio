@@ -29,25 +29,29 @@ const setPallete = (brand) => {
       return 'bg-[#63b649] border-[#63b649]'
     case 'Node':
       return 'bg-[#63b649] border-[#63b649]'
-      case 'Express':
-      return 'bg-[#020202] border-[#020202]'
+    case 'Express':
+      return 'bg-[#343434] border-[#343434]'
     case 'SQL':
       return 'bg-[#b91c1c] border-[#b91c1c]'
     case 'MongoDB':
       return 'bg-[#b1ff05] border-[#b1ff05]'
+    case 'Material UI':
+      return 'bg-[#007fff] border-[#007fff]'
+    case 'Vercel':
+      return 'bg-[#020202] border-[#020202]'
   }
 }
 
 ---
 
-<div class="project-card relative sm:p-5 rounded-lg md:flex gap-8 sm:border-[1px] border-neutral-300/35">
-  <div class="project-bg pointer-events-none top-0 left-0 absolute w-full h-full opacity-0 z-0 duration-500"></div>
+<div class="project-card relative sm:p-5 sm:rounded-lg md:flex gap-8 sm:border border-neutral-300/35 max-sm:last:border-b-0 max-sm:py-6 max-sm:border-b max-sm:border-zinc-700">
+  <div class="max-sm:hidden project-bg pointer-events-none top-0 left-0 absolute w-full h-full opacity-0 z-0 duration-500"></div>
   <div class="md:w-1/2 z-10">
     <img class="w-full rounded-lg border-[1px] border-neutral-700" src={`/portfolio/${thumbnail}`} alt="project img">
   </div>
   <div class="project-description flex flex-col gap-3 md:w-1/2 mt-4 lg:mt-0 z-10">
     <h3 id="project-title" class="font-[700] text-[24px] text-[var(--accent-color)]">{title}</h3>
-    <div class="project-tech flex gap-2">
+    <div class="project-tech flex flex-wrap gap-2">
       {
         technologies.map(tech => <Badge label={tech} palette ={setPallete(tech)} />)
       }
@@ -63,6 +67,10 @@ const setPallete = (brand) => {
     </div>
   </div>
 </div>
+
+<style>
+
+</style>
 
 <script>
   const projectCards = document.querySelectorAll('.project-card')

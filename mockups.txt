@@ -1,0 +1,13 @@
+MOCKUP
+Browser => Safari dark
+Shadow => 40
+Scale & Position => 62
+x => +4
+y => +6
+
+FRAME
+16:9
+Gradient => thumbnail shURLtener
+
+DOWNLOAD
+as png

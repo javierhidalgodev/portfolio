@@ -1,15 +1,13 @@
 {
   "name": "Portfolio Javier Hidalgo",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "git add -f dist && git commit -m \"Deploy\" && git push",
-    "push": "git add . && git commit -m \"$MESSAGE\" && git push"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^3.1.0",
