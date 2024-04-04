@@ -1,7 +1,7 @@
 {
-  "name": "Portfolio Javier Hidalgo",
+  "name": "portfolio-javier-hidalgo",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

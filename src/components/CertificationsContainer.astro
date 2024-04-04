@@ -7,14 +7,14 @@ const initialShowedCertifications = certifications.slice(0, 3)
 const remainingCertifications = certifications.slice(3)
 ---
 
-<div id="certifications-section" class="mt-5">
-  <h3 id="certicication-title" class="font-[700] text-[24px] ">Certificaciones</h3>
-  <div id="certifications-card-container" class="flex flex-col">
+<div id="certifications-section" class="mt-5 px-8 py-6 rounded-lg bg-neutral-800">
+  <h3 id="certicication-title" class="mb-3 font-[700] text-[24px]">Certificaciones</h3>
+  <div id="certifications-card-container" class="[&>div:first-of-type]:border-t">
     {
       initialShowedCertifications.map(c => <CertificationCard showed="true" object={c} />)
     }
   </div>
-  <div id="h-certifications-card-container" class="hidden flex flex-col">
+  <div id="h-certifications-card-container" class="hidden">
     {
       remainingCertifications.map(c => <CertificationCard showed="true" object={c} />)
     }
@@ -52,5 +52,9 @@ const remainingCertifications = certifications.slice(3)
 
   button[aria-expanded="true"]:hover {
     transform: translateY(-8px);
+  }
+
+  html:not(.dark) #certifications-section {
+    background-color: rgb(229, 229, 229);
   }
 </style>
