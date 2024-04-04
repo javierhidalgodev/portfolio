@@ -6,6 +6,13 @@
     "link": "https://fullstackopen.com/es/"
   },
   {
+    "title": "Compilación de aplicaciones JavaScript con TypeScript",
+    "centre": ["Microsoft Learn"],
+    "date": "abril 2024",
+    "duration": "6h",
+    "link": "https://learn.microsoft.com/es-es/users/javierhidalgo-2547/achievements/45j9leuk"
+  },
+  {
     "title": "Data Visualization with D3",
     "centre": ["freeCodeCamp"],
     "date": "enero 2024",
