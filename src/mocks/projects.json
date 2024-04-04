@@ -16,7 +16,7 @@
     "technologies": ["HTML", "JavaScript", "Tailwind"],
     "links": {
       "repo": "https://github.com/javihidalgodev/weather-app",
-      "demo": "https://javihidalgodev.github.io/weather-app/"
+      "demo": "https://javierhidalgodev.github.io/weather-app/"
     }
   },
   {
@@ -26,7 +26,7 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "links": {
       "repo": "https://github.com/javihidalgodev/50-projects-50-days/tree/main/46-quiz-app",
-      "demo": "https://javihidalgodev.github.io/50-projects-50-days/46-quiz-app/"
+      "demo": "https://javierhidalgodev.github.io/50-projects-50-days/46-quiz-app/"
     }
   },
   {
@@ -36,7 +36,7 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "links": {
       "repo": "https://github.com/javihidalgodev/50-projects-50-days/tree/main/48-random-image-feed",
-      "demo": "https://javihidalgodev.github.io/50-projects-50-days/48-random-image-feed/ "
+      "demo": "https://javierhidalgodev.github.io/50-projects-50-days/48-random-image-feed/ "
     }
   },
   {
@@ -46,7 +46,7 @@
     "technologies": ["HTML","CSS", "JavaScript"],
     "links": {
       "repo": "https://github.com/javihidalgodev/50-projects-50-days",
-      "demo": "https://javihidalgodev.github.io/50P50D-by-javi-hidalgo-dev/"
+      "demo": "https://javierhidalgodev.github.io/50P50D-by-javi-hidalgo-dev/"
     }
   },
   {
@@ -56,7 +56,7 @@
     "technologies": ["HTML", "CSS", "React"],
     "links": {
       "repo": "https://github.com/javihidalgodev/spotify-artists-finder",
-      "demo": "https://javihidalgodev.github.io/spotify-artists-finder/"
+      "demo": "https://javierhidalgodev.github.io/spotify-artists-finder/"
     }
   },
   {
@@ -66,7 +66,7 @@
     "technologies": ["HTML", "CSS", "React"],
     "links": {
       "repo": "https://github.com/javihidalgodev/idioms-app",
-      "demo": "https://javihidalgodev.github.io/idioms-app/"
+      "demo": "https://javierhidalgodev.github.io/idioms-app/"
     }
   },
   {
@@ -76,7 +76,7 @@
     "technologies": ["HTML", "CSS", "JavaScript", "Astro"],
     "links": {
       "repo": "https://github.com/javihidalgodev/all-batmans",
-      "demo": "https://javihidalgodev.github.io/all-batmans/"
+      "demo": "https://javierhidalgodev.github.io/all-batmans/"
     }
   }
 ]
