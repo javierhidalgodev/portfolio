@@ -4,7 +4,6 @@ const plugin = require('tailwindcss/plugin')
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: ['selector', 'html[class="dark"]'],
 	theme: {
 		extend: {
 			fontFamily: {
