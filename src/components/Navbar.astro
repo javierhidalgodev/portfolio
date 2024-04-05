@@ -3,8 +3,8 @@ import JavierHidalgoLogo from '../icons/JavierHidalgoLogo.astro'
 import ThemeSelector from './ThemeSelector.astro'
 ---
 
-<nav id="navbar" class='w-full fixed p-[12px] bg-[var(--secondary)] max-sm:text-[var(--primary)] sm:bg-neutral-100/30 sm:backdrop-blur-2xl sm:border-b sm:border-zinc-700 z-20'>
-  <div class="mx-auto max-w-[900px] w-full flex justify-between sm:justify-center items-center flex-wrap">
+<nav id="navbar" class='w-full fixed p-[12px] bg-[var(--secondary)] sm:bg-neutral-100/30 max-sm:text-[var(--primary)] sm:backdrop-blur-2xl sm:border-b sm:border-zinc-700 z-20'>
+  <div class="mx-auto max-w-[900px] sm:px-6 w-full flex justify-between sm:justify-center items-center flex-wrap">
     <span class='sm:hidden block text-2xl font-bold'>
       <a href="#main-section" class="p-2 block">
         javier<span class="text-[var(--accent-color-variant)]">hidalgo</span>
@@ -20,11 +20,13 @@ import ThemeSelector from './ThemeSelector.astro'
         </svg>
       </button>
     </div>
-    <div id="menu-default" class='hidden sm:flex w-full sm:w-fit h-screen sm:h-fit p-4 sm:p-1.5 flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-3 sm:rounded-md text-3xl sm:text-base children-li:px-2 children-li:py-4 sm:children-li:py-0.5 children-li:rounded-md sm:hover:children-li:bg-[var(--accent-color)] sm:hover:children-li:text-[var(--accent-color-variant)] children-li:duration-150'>
-      <a href='#main-section'>Inicio</a>
-      <a href='#experience-section'>Experiencia</a>
-      <a href='#projects-section' >Proyectos</a>
-      <a href='mailto:francisco.hidalgo.nula@gmail.com' class="font-bold sm:bg-[var(--accent-color-variant)] sm:text-[var(--accent-color)]">Contacto</a>
+    <div id="menu-default" class='hidden sm:flex w-full h-screen sm:h-fit py-4 sm:py-1.5 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-0 sm:gap-3 sm:rounded-md text-3xl sm:text-base'>
+      <div class='max-sm:flex max-sm:flex-col max-sm:items-center [&>a]:px-2 [&>a]:py-4 sm:[&>a]:py-1 [&>a]:rounded-md sm:hover:[&>a]:bg-[var(--accent-color)] sm:hover:[&>a]:text-[var(--accent-color-variant)] [&>a]:duration-150'>
+        <a href='#main-section'>Inicio</a>
+        <a href='#experience-section'>Experiencia</a>
+        <a href='#projects-section' >Proyectos</a>
+        <a href='mailto:francisco.hidalgo.nula@gmail.com' class="font-bold sm:text-[var(--accent-color)] sm:border border-[var(--accent-color)] box-border">Contacto</a>
+      </div>
       <div class="hidden sm:inline-flex">
         <ThemeSelector />
       </div>
