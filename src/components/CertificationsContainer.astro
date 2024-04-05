@@ -7,7 +7,7 @@ const initialShowedCertifications = certifications.slice(0, 3)
 const remainingCertifications = certifications.slice(3)
 ---
 
-<div id="certifications-section" class="mt-5 px-8 py-6 rounded-lg bg-neutral-800">
+<div id="certifications-section" class="mt-5 px-8 py-6 rounded-lg bg-neutral-100 dark:bg-neutral-800">
   <h3 id="certicication-title" class="mb-3 font-[700] text-[24px]">Certificaciones</h3>
   <div id="certifications-card-container" class="[&>div:first-of-type]:border-t">
     {
@@ -19,7 +19,7 @@ const remainingCertifications = certifications.slice(3)
       remainingCertifications.map(c => <CertificationCard showed="true" object={c} />)
     }
   </div>
-  <button id="load-more-btn" aria-expanded="false" class="w-auto mx-auto mt-8 py-1 px-3 flex items-center justify-center gap-2 bg-white rounded-full text-base text-black hover:translate-y-2 hover:text-[#00271e] hover:bg-[#dbff00] font-[700] border border-transparent duration-100">
+  <button id="load-more-btn" aria-expanded="false" class="w-auto mx-auto mt-8 py-1 px-3 flex items-center justify-center gap-2 bg-white rounded-full text-base text-black hover:translate-y-1 hover:text-[#00271e] hover:bg-[#dbff00] font-[700] border border-transparent duration-100">
     <span>Ver todas</span><Arrow />
   </button>
 </div>
@@ -51,7 +51,7 @@ const remainingCertifications = certifications.slice(3)
   }
 
   button[aria-expanded="true"]:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
   }
 
   html:not(.dark) #certifications-section {
