@@ -10,6 +10,16 @@
     }
   },
   {
+    "thumbnail": "knoweats-lp-thumbnail.webp",
+    "title": "Knoweats (Landing Page)",
+    "description": "Con de la página principal de la web de comida a domicilio Knoweats.",
+    "technologies": ["React", "TypeScript", "Tailwind", "Vite", "Vercel"],
+    "links": {
+      "repo": "https://github.com/javierhidalgodev/knoweats-lp",
+      "demo": "https://knoweats-lp.vercel.app/"
+    }
+  },
+  {
     "thumbnail": "weather-app-thumbnail.webp",
     "title": "Weather APP",
     "description": "Consulta el tiempo de cualquier parte del mundo. Puedes obtener datos como la temperatura actual, máxima y mínima, velocidad del viento, humedad... Los datos consumidos vienen de la API OpenWeather.",
