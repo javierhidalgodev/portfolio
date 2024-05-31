@@ -3,7 +3,7 @@
     "thumbnail": "shurltener-thumbnail.webp",
     "title": "ShURLtener",
     "description": "Microservicio para acortar URLs. Se trata de una aplicación completa, desarrollada con Express y MongoDB para el Back, y Vite/React/Material UI en el front. Cuenta con persistencia de datos en el cliente.",
-    "technologies": ["Express", "MongoDB", "Vite", "React", "Material UI", "Vercel"],
+    "technologies": ["Node", "Express", "MongoDB", "Vite", "React", "Material UI", "Vercel"],
     "links": {
       "repo": "https://github.com/javierhidalgodev/shurltener",
       "demo": "https://shurltener.vercel.app/"
@@ -12,8 +12,18 @@
   {
     "thumbnail": "knoweats-lp-thumbnail.webp",
     "title": "Knoweats (Landing Page)",
-    "description": "Con de la página principal de la web de comida a domicilio Knoweats.",
+    "description": "Clon de la página principal de la web de comida a domicilio Knoweats.",
     "technologies": ["React", "TypeScript", "Tailwind", "Vite", "Vercel"],
+    "links": {
+      "repo": "https://github.com/javierhidalgodev/knoweats-lp",
+      "demo": "https://knoweats-lp.vercel.app/"
+    }
+  },
+  {
+    "thumbnail": "patientor-thumbnail.webp",
+    "title": "Patientor",
+    "description": "Aplicación para gestión de pacientes. Proyecto de prueba desarollado con el stack MERN+TypeScript.",
+    "technologies": ["Node", "Express", "React", "TypeScript", "Material UI", "Vite", "Vercel"],
     "links": {
       "repo": "https://github.com/javierhidalgodev/knoweats-lp",
       "demo": "https://knoweats-lp.vercel.app/"
